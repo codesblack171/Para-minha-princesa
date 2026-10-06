@@ -1,0 +1,910 @@
+/* =========================================
+   CONFIGURAÇÕES GERAIS
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    background: #fffbea;
+    color: #5d4b25;
+    line-height: 1.7;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* =========================================
+   FLORES DECORATIVAS
+========================================= */
+
+.flor {
+    position: fixed;
+    z-index: 20;
+    font-size: 30px;
+    pointer-events: none;
+    opacity: 0.8;
+
+    animation:
+        flutuar 4s ease-in-out infinite;
+}
+
+.flor1 {
+    top: 30px;
+    left: 25px;
+}
+
+.flor2 {
+    top: 100px;
+    right: 30px;
+}
+
+.flor3 {
+    bottom: 40px;
+    left: 30px;
+}
+
+.flor4 {
+    bottom: 80px;
+    right: 25px;
+}
+
+@keyframes flutuar {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================================
+   CAPA
+========================================= */
+
+.hero {
+
+    min-height: 100vh;
+
+    background-image:
+        linear-gradient(
+            rgba(80, 60, 20, 0.35),
+            rgba(80, 60, 20, 0.55)
+        ),
+        url("fotos/foto1.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    position: relative;
+}
+
+.hero-overlay {
+
+    padding: 40px;
+
+    max-width: 900px;
+
+    color: white;
+
+    animation:
+        aparecer 1.5s ease;
+
+}
+
+.hero h1 {
+
+    font-size:
+        clamp(55px, 10vw, 120px);
+
+    letter-spacing: 8px;
+
+    margin: 10px 0;
+
+    text-shadow:
+        0 4px 15px rgba(0,0,0,0.5);
+
+}
+
+.mini-title {
+
+    color: #b48a21;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+
+}
+
+.hero .mini-title {
+
+    color: #fff5b0;
+
+}
+
+.subtitle {
+
+    font-size: 22px;
+
+    max-width: 700px;
+
+    margin:
+        0 auto 35px;
+
+}
+
+
+/* =========================================
+   BOTÃO
+========================================= */
+
+.botao {
+
+    display: inline-block;
+
+    background: #e7c85b;
+
+    color: #5d4819;
+
+    padding:
+        13px 30px;
+
+    border-radius: 30px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+
+    box-shadow:
+        0 5px 15px rgba(0,0,0,0.2);
+
+}
+
+.botao:hover {
+
+    background: #f4dc76;
+
+    transform:
+        translateY(-3px);
+
+}
+
+
+/* =========================================
+   SEÇÕES
+========================================= */
+
+.section {
+
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding:
+        100px 25px;
+
+    text-align: center;
+
+}
+
+.section h2 {
+
+    font-size:
+        clamp(30px, 5vw, 48px);
+
+    color: #69521e;
+
+    margin:
+        10px 0 40px;
+
+}
+
+
+/* =========================================
+   CONTADOR
+========================================= */
+
+.contador-section {
+
+    background: #fff9d9;
+
+    max-width: none;
+
+}
+
+.contador {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin:
+        40px auto;
+
+    flex-wrap: wrap;
+
+}
+
+.tempo {
+
+    background: white;
+
+    border:
+        2px solid #ead78b;
+
+    border-radius: 20px;
+
+    padding:
+        25px 20px;
+
+    min-width: 120px;
+
+    box-shadow:
+        0 8px 20px
+        rgba(120, 90, 20, 0.12);
+
+}
+
+.tempo span {
+
+    display: block;
+
+    font-size: 40px;
+
+    font-weight: bold;
+
+    color: #b18a1e;
+
+}
+
+.tempo small {
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+
+    color: #88743b;
+
+}
+
+.separador {
+
+    font-size: 35px;
+
+    color: #c5a73e;
+
+    font-weight: bold;
+
+}
+
+.contador-texto {
+
+    font-size: 18px;
+
+}
+
+
+/* =========================================
+   HISTÓRIA
+========================================= */
+
+.texto-historia {
+
+    max-width: 800px;
+
+    margin: auto;
+
+    text-align: left;
+
+}
+
+.texto-historia p {
+
+    margin-bottom: 25px;
+
+    font-size: 18px;
+
+}
+
+.texto-historia strong {
+
+    color: #b28a1f;
+
+}
+
+
+/* =========================================
+   APELIDOS
+========================================= */
+
+.apelidos-section {
+
+    background: #fffdf1;
+
+    max-width: none;
+
+}
+
+.apelidos {
+
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 20px;
+
+}
+
+.apelido {
+
+    background: #fff;
+
+    border:
+        2px solid #ead78b;
+
+    border-radius: 20px;
+
+    padding: 25px;
+
+    width: 190px;
+
+    transition: 0.3s;
+
+}
+
+.apelido:hover {
+
+    transform:
+        translateY(-8px);
+
+    box-shadow:
+        0 10px 25px
+        rgba(120,90,20,0.15);
+
+}
+
+.apelido span {
+
+    font-size: 35px;
+
+}
+
+.apelido h3 {
+
+    margin-top: 10px;
+
+    color: #705820;
+
+}
+
+
+/* =========================================
+   GALERIA
+========================================= */
+
+.galeria {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+
+}
+
+.foto-card {
+
+    background: white;
+
+    padding: 10px;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 10px 25px
+        rgba(90,70,20,0.15);
+
+    transition: 0.4s;
+
+}
+
+.foto-card:hover {
+
+    transform:
+        translateY(-8px)
+        rotate(1deg);
+
+}
+
+.foto-card img {
+
+    width: 100%;
+
+    height: 280px;
+
+    object-fit: cover;
+
+    border-radius: 6px;
+
+}
+
+.foto-legenda {
+
+    padding:
+        15px 5px 8px;
+
+    color: #77632e;
+
+    font-style: italic;
+
+}
+
+
+/* =========================================
+   MÚSICA
+========================================= */
+
+.musica-section {
+
+    background: #fff6c8;
+
+    max-width: none;
+
+}
+
+.musica-card {
+
+    max-width: 700px;
+
+    margin: auto;
+
+    background: white;
+
+    padding: 45px;
+
+    border-radius: 30px;
+
+    box-shadow:
+        0 15px 40px
+        rgba(120,90,20,0.15);
+
+}
+
+
+/* =========================================
+   FOTO DA MÚSICA
+========================================= */
+
+.disco {
+
+    width: 140px;
+
+    height: 140px;
+
+    border-radius: 50%;
+
+    margin:
+        0 auto 25px;
+
+    overflow: hidden;
+
+    border:
+        8px solid #f5e7a4;
+
+    box-shadow:
+        0 8px 25px
+        rgba(100, 80, 20, 0.25);
+
+    background: #e6c85c;
+
+}
+
+.disco img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+}
+
+
+/* =========================================
+   TEXTO DA MÚSICA
+========================================= */
+
+.musica-card p {
+
+    margin-bottom: 25px;
+
+}
+
+audio {
+
+    width: 100%;
+
+}
+
+
+/* =========================================
+   ANIMAÇÃO DO DISCO
+========================================= */
+
+@keyframes girar {
+
+    from {
+
+        transform:
+            rotate(0deg);
+
+    }
+
+    to {
+
+        transform:
+            rotate(360deg);
+
+    }
+
+}
+
+
+/* =========================================
+   CARTA
+========================================= */
+
+.carta-section {
+
+    background:
+        linear-gradient(
+            rgba(255, 251, 225, 0.95),
+            rgba(255, 251, 225, 0.95)
+        );
+
+    max-width: none;
+
+}
+
+.carta {
+
+    max-width: 750px;
+
+    margin: auto;
+
+    background: #fffef7;
+
+    padding: 50px;
+
+    text-align: left;
+
+    border-radius: 5px;
+
+    border:
+        1px solid #eadca5;
+
+    box-shadow:
+        0 15px 40px
+        rgba(100,80,20,0.12);
+
+    position: relative;
+
+}
+
+.carta::before {
+
+    content: "🌻";
+
+    position: absolute;
+
+    top: 20px;
+
+    right: 25px;
+
+    font-size: 30px;
+
+}
+
+.carta p {
+
+    margin-bottom: 22px;
+
+    font-size: 18px;
+
+}
+
+.final-carta {
+
+    color: #b08a22;
+
+    font-weight: bold;
+
+    font-size:
+        21px !important;
+
+}
+
+.assinatura {
+
+    text-align: right;
+
+    margin-top: 40px;
+
+}
+
+
+/* =========================================
+   FUTURO
+========================================= */
+
+.futuro {
+
+    min-height: 550px;
+
+    background-image:
+
+        linear-gradient(
+            rgba(95, 76, 25, 0.65),
+            rgba(95, 76, 25, 0.65)
+        ),
+
+        url("fotos/foto2.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    color: white;
+
+}
+
+.futuro-overlay {
+
+    max-width: 750px;
+
+    padding: 30px;
+
+}
+
+.futuro h2 {
+
+    font-size:
+        clamp(35px, 6vw, 65px);
+
+    margin:
+        15px 0 25px;
+
+}
+
+.futuro p:not(.mini-title) {
+
+    font-size: 20px;
+
+}
+
+.coracoes {
+
+    font-size: 35px;
+
+    margin-top: 30px;
+
+}
+
+
+/* =========================================
+   RODAPÉ
+========================================= */
+
+footer {
+
+    background: #554719;
+
+    color: #fff5bd;
+
+    text-align: center;
+
+    padding: 35px 20px;
+
+}
+
+footer p {
+
+    margin: 5px;
+
+}
+
+
+/* =========================================
+   ANIMAÇÕES
+========================================= */
+
+@keyframes aparecer {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(30px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+/* =========================================
+   RESPONSIVIDADE
+========================================= */
+
+@media (max-width: 800px) {
+
+    .galeria {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+    .hero h1 {
+
+        letter-spacing: 4px;
+
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .section {
+
+        padding:
+            70px 18px;
+
+    }
+
+    .hero {
+
+        min-height: 90vh;
+
+    }
+
+    .hero-overlay {
+
+        padding: 25px;
+
+    }
+
+    .hero h1 {
+
+        font-size: 50px;
+
+        letter-spacing: 2px;
+
+    }
+
+    .subtitle {
+
+        font-size: 17px;
+
+    }
+
+    .galeria {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .foto-card img {
+
+        height: 320px;
+
+    }
+
+    .contador {
+
+        gap: 8px;
+
+    }
+
+    .tempo {
+
+        min-width: 80px;
+
+        padding:
+            15px 10px;
+
+    }
+
+    .tempo span {
+
+        font-size: 28px;
+
+    }
+
+    .separador {
+
+        display: none;
+
+    }
+
+    .carta {
+
+        padding:
+            30px 22px;
+
+    }
+
+    .carta p {
+
+        font-size: 16px;
+
+    }
+
+    .flor {
+
+        font-size: 22px;
+
+    }
+
+}
